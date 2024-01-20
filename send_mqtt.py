@@ -8,7 +8,7 @@ import os
 import requests
 
 def create_client():
-    sensor = requests.post('http://10.0.0.76:8080/sensors', json={"name": "Snensor", "location": "Grafenschachen", "active": True, "type": "INDOOR"})
+    sensor = requests.post('http://10.0.0.76:8080/api/sensors', json={"name": "Snensor", "location": "Grafenschachen", "active": True, "type": "INDOOR"})
     return sensor.json()['id']
 
 

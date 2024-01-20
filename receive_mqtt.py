@@ -13,7 +13,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, message):
     data = json.loads(message.payload)
     print(data)
-    requests.post('http://10.0.0.76:8080/measurements', json=data)
+    requests.post('http://10.0.0.76:8080/api/measurements', json=data)
     
 
 if __name__ == "__main__":
