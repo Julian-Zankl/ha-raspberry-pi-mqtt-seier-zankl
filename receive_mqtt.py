@@ -5,11 +5,11 @@ from draw_data import draw_data
 import json
 import requests
 
-device = None
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code " + str(rc))
     client.subscribe("raspberry/mqtt")
+
 
 def on_message(client, userdata, message):
     data = json.loads(message.payload)
